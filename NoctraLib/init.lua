@@ -133,7 +133,7 @@ local function Bootstrap()
     end
 
     -- 5. savemanager.lua (opcional)
-    local okSM, smAttach = pcall(LoadModule, "savemanager.lua")
+    local okSM, smAttach = pcall(LoadModule, "addons/savemanager.lua")
     if okSM and typeof(smAttach) == "function" then
         local ok2, err2 = pcall(smAttach, Library)
         if not ok2 then
@@ -144,7 +144,7 @@ local function Bootstrap()
     end
 
     -- 6. thememanager.lua (opcional)
-    local okTM, tmAttach = pcall(LoadModule, "thememanager.lua")
+    local okTM, tmAttach = pcall(LoadModule, "addons/thememanager.lua")
     if okTM and typeof(tmAttach) == "function" then
         local ok2, err2 = pcall(tmAttach, Library)
         if not ok2 then
